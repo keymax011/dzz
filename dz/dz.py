@@ -1,23 +1,52 @@
-#def uniq(input):
-#  output = []
-#  for x in input:
-#    if x not in output:
-#      output.append(x)
-#  return output
+import random
+l1 = [7, 9, 7]
+# for i in range(10):
+#     l1.append(random.randint(0, 100))
+# print(l1)
+for i in l1:
+    if i  l1:
+        l1.remove(i)
+print(l1)
 
-#z = [3, 7, 8, 9]
-#x = []
-#x = z.copy()
-#print(x)
+# import random
+# l1 = []
+# for i in range(10):
+#     l1.append(random.randint(0, 100))
+# print(l1)
+# l2 = []
+# for i in l1:
+#     l2.append(i)
+# print(l2)
 
-#s1 = [5, 3, 6, 7]
-#s2 = [5, 3, 9, 7]
-#s3 = [x for x in s1 if x not in s2]
-#print(s3)
+# import random
+# l1 = []
+# l2 = []
+# l3 = []
+# for i in range(10):
+#     l1.append(random.randint(0, 100))
+# print(l1)
+# for i in range(10):
+#     l2.append(random.randint(0, 100))
+# print(l2)
+# for i in l1:
+#     if i in l2:
+#         l3.append(i)
+# print(l3)
 
-dic1 = {1:10, 2:20}
-dic2 = {3:30, 4:40}
-dic3 = {5:50,6:60}
-dic4 = dic1.update(dic2)
-dic5 = dic1.update(dic3)
-print(dic1)
+# dic1={1:10, 2:20}
+# dic2={3:30, 4:40}
+# dic3={5:50,6:60}
+# dic4 = {}
+# for d in (dic1, dic2, dic3): dic4.update(d)
+# print(dic4)
+
+# import random
+# d = {}
+# x = 0
+# for x in range(0, 1):
+#     x = random.randint(0, 15)
+# print(x)
+# y = x*x
+# print(y)
+# d = {x: y}
+# print(d)
