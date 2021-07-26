@@ -1,12 +1,9 @@
 import random
-l1 = [7, 9, 7]
-# for i in range(10):
-#     l1.append(random.randint(0, 100))
-# print(l1)
-for i in l1:
-    if i  l1:
-        l1.remove(i)
-print(l1)
+l = []
+for i in range(10):
+    l.append(random.randint(0, 100))
+print(l)
+print(list(set(l)))
 
 # import random
 # l1 = []
