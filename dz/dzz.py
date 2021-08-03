@@ -1,72 +1,49 @@
-# cort = (7, 8, 9, "Hello")
-# cort = list(cort)
-# print(cort)
+# def number(num):
+#     return num%10 + number(num//10) if num > 9 else num
+# print(number(123))
 
-# l = [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
-# print([t[:-1] + (100,) for t in l])
+# def fibonacci(n):
+#     if n in (1, 2):
+#         return 1
+#     return fibonacci(n - 1) + fibonacci(n - 2)
+#
+#
+# print(fibonacci(10))
 
-# c1 = (1, 2, 3, 4)
-# c2 = (3, 5, 2, 1)
-# c3 = (2, 2, 3, 1)
-# q, w, e, r = c1
-# t, y, u, i = c2
-# a, s, d, f = c3
-# c4 = (q+t+a, w+y+s, e+u+d, r+i+f)
-# print(c4)
+# def mult(a, b):
+#    if a == 0:
+#       return 0
+#    elif a == 1:
+#       return b
+#    else:
+#       return b + mult(a-1, b)
+# print(mult(7, 5))
 
-# import random
-# s1 = set()
-# for _ in range(0, 10):
-#     s1.add(random.randint(0, 100))
-# print(s1)
-# s = int(input())
-# if s in s1:
-#     print("yes")
-# else: print("no")
+# def step(n):
+#    if n & (n - 1) :
+#       print("NO")
+#    else:
+#       print("YES")
+#
+# print(step(4))
 
+# Создайте inner функцию для вычисления сложения следующим
+# образом:
+# a. Создайте внешнюю функцию, которая будет принимать два
+# параметра, a и b
+# b. Создайте внутреннюю функцию внутри внешней функции,
+# которая будет вычислять сложение a и b
+# c. Наконец, внешняя функция добавит 5 и вернет ее.
 
-# import random
-# s1 = set()
-# s2 = set()
-# f = False
-# for _ in range(0, 10):
-#     s1.add(random.randint(0, 100))
-# print(s1)
-# for _ in range(0, 10):
-#     s2.add(random.randint(0, 100))
-# print(s2)
-# for i in s1:
-#     if i in s2:
-#         f = True
-#         break
-# print(f)
+# a = int(input())
+# b = int(input())
+# def inner ():
+#    global a, b
+#    print(a+b)
+#
+# print(inner())
 
-# import random
-# s1 = set()
-# s2 = set()
-# s3 = set()
-# for _ in range(0, 10):
-#     s1.add(random.randint(0, 100))
-# print(s1)
-# for _ in range(0, 10):
-#     s2.add(random.randint(0, 100))
-# print(s2)
-# for i in s1:
-#     if i not in s2:
-#         s3.add(i)
-# print(s3)
+def inner (a, b):
+   print(a+b)
 
-import random
-s1 = set()
-s2 = set()
-for _ in range(0, 10):
-    s1.add(random.randint(0, 100))
-print(s1)
-for _ in range(0, 10):
-    s2.add(random.randint(0, 100))
-print(s2)
-for i in s1:
-    if i in s2:
-        s1.remove(i)
-        break
-print(s1)
+print(inner(4, 4))
