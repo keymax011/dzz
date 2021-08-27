@@ -1,49 +1,22 @@
-# def number(num):
-#     return num%10 + number(num//10) if num > 9 else num
-# print(number(123))
+import random
 
-# def fibonacci(n):
-#     if n in (1, 2):
-#         return 1
-#     return fibonacci(n - 1) + fibonacci(n - 2)
-#
-#
-# print(fibonacci(10))
+f = open('file.txt', 'w')
+for _ in range(100):
+    line = ''
+    for i in range(10):
+        i = str(random.randint(0,100))
+        ret = line
+        line = line + i + " "
+    f.write(line)
+    f.write("\n")
+    del line
 
-# def mult(a, b):
-#    if a == 0:
-#       return 0
-#    elif a == 1:
-#       return b
-#    else:
-#       return b + mult(a-1, b)
-# print(mult(7, 5))
+def func(file_name):
+    r = open(file_name, "a")
+    ret = 0
+    for n in r:
+        ret = n*n
+    r.close()
+    return ret
 
-# def step(n):
-#    if n & (n - 1) :
-#       print("NO")
-#    else:
-#       print("YES")
-#
-# print(step(4))
-
-# Создайте inner функцию для вычисления сложения следующим
-# образом:
-# a. Создайте внешнюю функцию, которая будет принимать два
-# параметра, a и b
-# b. Создайте внутреннюю функцию внутри внешней функции,
-# которая будет вычислять сложение a и b
-# c. Наконец, внешняя функция добавит 5 и вернет ее.
-
-# a = int(input())
-# b = int(input())
-# def inner ():
-#    global a, b
-#    print(a+b)
-#
-# print(inner())
-
-def inner (a, b):
-   print(a+b)
-
-print(inner(4, 4))
+print(func("file.txt"))
