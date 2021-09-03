@@ -1,40 +1,94 @@
-# def bubble_sort(l):
-#     t = l.copy()
-#     for n in range(0, len(t)):
-#         for i in range(len(t) - 1):
-#             if t[i] > t[n]:
-#                 t[i], t[n] = t[n], t[i]
-#     return t
-#
-# nums = [4, 5, 1, 8]
-# sort = bubble_sort(nums)
-# print(sort)
+class Homework:
+    def __init__(self, name, description, complexity, status):
+        self.name = name
+        self.description = description
+        self.complexity = complexity
+        self.status = status
+        self.grade = 0
 
-tuples = []
+    def __str__(self):
+        return f"{self.name}, {self.description}, {self.complexity}, {self.status}"
 
-lists = [[34587, 'Learning Python, Mark Lutz', 4, 40.95],
-[98762, 'Programming Python, Mark Lutz', 5, 56.80],
-[77226, 'Head First Python, Paul Barry', 3, 32.95],
-[88112, 'Einfuhrung in Python3, Bernd Klein', 3, 24.99]]
 
-lists2 = [[24387, ' на русском', 2, 4.59],
-[18762, 'The C Programming Language (2nd Edition)', 12, 78.80],
-[87236, 'C Programming Absolute Beginners Guide', 1, 23.55],
-[58132, 'Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14', 9, 42.89]]
+class Student:
+    def __init__(self, name, age, subscribed_course):
+        self.name = name
+        self.age = age
+        self.avarage_grade = 0
+        self.subscribed_course = subscribed_course
+        self.homeworks = []
 
-for i in lists:
-    tuples.append(tuple(i))
+    def __str__(self):
+        ret = f"{self.name}, age: {self.age}, grade: {self.avarage_grade}, course: {self.subscribed_course}\n"
+        ret = ret + "Homeworks:\n"
+        for h in self.homeworks:
+            ret = ret + "\t" + str(h) + "\n"
+        return ret
 
-for n in lists2:
-    tuples.append(tuple(n))
+    def add_homework(self, homework):
+        self.homeworks.append(homework)
 
-sort = []
-for f in tuples:
-    sort.append(sorted(tuples, key = lambda price: price[3]))
-    break
-print(sort)
+    def homework_status(self, status):
+        ret_status = False
+        if status == "+":
+            ret_status = True
+        for i in students:
+            for h in i.homeworks:
+                if ret_status == True:
+                    h.status = True
 
-filtred = []
-for h in tuples:
-    filtred.append(tuple(filter(lambda x: h[2] >= 5, h)))
-print(filtred)
+
+# Helpers functions
+def show_students(students):
+    for s in students:
+        print(s)
+
+def sort_by_age(students):
+    return sorted(students, key=lambda s: s.age)
+
+def sort_by_grade(students):
+    return sorted(students, key=lambda s: s.avarage_grade, reverse=True)
+
+class Table:
+    def __init__(self, name, age, subscribed_course):
+        self.name = name
+        self.age = age
+        self.avarage_grade = 0
+        self.subscribed_course = subscribed_course
+        self.homeworks = []
+
+    def show_studentss(studentss):
+        for s in studentss:
+            print(s)
+
+    def add_homeworks(self, homework):
+        for i in homework:
+            self.homeworks.append(i)
+
+students = [
+    Student("Student 1", 12, "Python")
+    , Student("Student 2", 16, "Python")
+    , Student("Student 3", 15, "Python")
+    , Student("Student 4", 14, "Python")
+    , Student("Student 5", 10, "Python")
+]
+
+studentss = [
+    Student("Student 1", 12, "Python")
+    , Student("Student 2", 16, "Python")
+    , Student("Student 3", 15, "Python")
+    , Student("Student 4", 14, "Python")
+    , Student("Student 5", 10, "Python")
+    , Student("Student 6", 14, "Python")
+    , Student("Student 7", 11, "Python")
+]
+
+homeworks = [
+    Homework ("Homework 1", "Description 1", 2, False)
+    ,Homework ("Homework 2", "Description 2", 5, False)
+]
+
+
+
+print("Initial")
+show_students(studentss)
